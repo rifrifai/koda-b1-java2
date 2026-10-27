@@ -8,18 +8,19 @@ public class ContractEmployee extends Employee {
 
     @Override
     public void salaryIncrease(int salary) {
-        if(salary <= 0) {
-            System.out.println("Salary Increase = Rp. " + salary);
-            System.out.println("Error: Kenaikan Gaji harus lebih dari 0!");
-            return;
-        } else if (salary >= 500000){
-            System.out.println("Salary Increase = Rp. " + salary);
-            System.out.println("Error: Kenaikan gaji maksimal Rp500000");
-            return;
-        } else {
+        try {
+            if(salary <= 0) {
+                throw new IllegalArgumentException("Kenaikan Gaji harus lebih dari 0!");
+            }
+            if(salary > 500000) {
+                throw new IllegalArgumentException("Kenaikan gaji maksimal Rp500000");
+            }
+
             System.out.println("Salary Increase = Rp. " + salary);
             addSalary(salary);
-            return;
+        } catch (IllegalArgumentException e) {
+            System.out.println("Salary Increase = Rp. " + salary);
+            System.out.println("Error: " + e.getMessage());
         }
     }
 }

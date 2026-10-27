@@ -15,6 +15,6 @@ public class App
         permanentEmp.ShowInfo();
         permanentEmp.salaryIncrease(1000000);
         contractEmp.ShowInfo();
-        contractEmp.salaryIncrease(500000);
+        contractEmp.salaryIncrease(500001);
     }
 }

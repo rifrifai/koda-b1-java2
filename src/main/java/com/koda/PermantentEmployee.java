@@ -10,12 +10,15 @@ public class PermantentEmployee extends Employee {
 
     @Override
     public void salaryIncrease(int salary) {
-        if(salary <= 0) {
+        try {
+            if (salary > 0){
+                System.out.println("Salary Increase = Rp. " + salary);
+                addSalary(salary);
+            }
+            throw new IllegalArgumentException("Kenaikan Gaji harus lebih dari 0!");
+        } catch (IllegalArgumentException e) {
             System.out.println("Salary Increase = Rp. " + salary);
-            System.out.println("Error: Kenaikan Gaji harus lebih dari 0!");
-        } else {
-            System.out.println("Salary Increase = Rp. " + salary);
-            addSalary(salary);
+            System.out.println("Error: " + e.getMessage());
         }
     }
 }
