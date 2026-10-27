@@ -23,15 +23,13 @@ public abstract class Employee {
     }
 
     public void ShowInfo() {
-        System.out.println("=======================");
-        System.out.println("     KODA ENTERPRISE    ");
-        System.out.println("=======================");
-        System.out.println("Employee ID : " + _employeeID);
-        System.out.println("Name        : " + _name);
-        System.out.println("Position    : " + _position);
-        System.out.println("Department  : " + _department);
-        System.out.println("Salary      : Rp. " + _salary);
-
-        // _salary.salaryIncrease(150000);
+        System.out.println("==========================");
+        System.out.println("      KODA ENTERPRISE    ");
+        System.out.println("==========================");
+        System.out.println("Employee ID     : " + _employeeID);
+        System.out.println("Name            : " + _name);
+        System.out.println("Position        : " + _position);
+        System.out.println("Department      : " + _department);
+        System.out.println("Salary          : Rp. " + _salary);
     }
 }

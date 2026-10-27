@@ -16,10 +16,10 @@ public class ContractEmployee extends Employee {
                 throw new IllegalArgumentException("Kenaikan gaji maksimal Rp500000");
             }
 
-            System.out.println("Salary Increase = Rp. " + salary);
+            System.out.println("Salary Increase : Rp. " + salary);
             addSalary(salary);
         } catch (IllegalArgumentException e) {
-            System.out.println("Salary Increase = Rp. " + salary);
+            System.out.println("Salary Increase : Rp. " + salary);
             System.out.println("Error: " + e.getMessage());
         }
     }
